@@ -65,7 +65,7 @@ function DisplayfavoriteList(list){
       const slideList = remainingData.map(each => `
       <li class="splide__slide">
         <div class="slide-container">
-            <img src="${each.src.small}" alt="Image" style="width:100%;height:200px;">
+            <img src="${each.src.small}" alt="Image" class="slide-image">
             <img src="./red_Heart.png" class="heart" onClick="remove('${encodeURIComponent(JSON.stringify(each))}')"/>
             <p class="slider-image-name">${each.alt}</p>
             <p class="slider-photographer">${each.photographer}</p>
