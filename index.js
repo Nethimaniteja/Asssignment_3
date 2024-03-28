@@ -65,7 +65,7 @@ function DisplayfavoriteList(list){
       const slideList = remainingData.map(each => `
       <li class="splide__slide">
         <div class="slide-container">
-            <img src="${each.src.small}" alt="Image" class="slide-image">
+            <img src="${each.src.medium}" alt="Image" class="slide-image">
             <img src="./red_Heart.png" class="heart" onClick="remove('${encodeURIComponent(JSON.stringify(each))}')"/>
             <p class="slider-image-name">${each.alt}</p>
             <p class="slider-photographer">${each.photographer}</p>
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const slideList = remainingData.map(each => `
       <li class="splide__slide">
         <div class="slide-container">
-            <img src="${each.src.small}" alt="Image"  class="slide-image">
+            <img src="${each.src.medium}" alt="Image"  class="slide-image">
             <img src="./Heart.png" class="heart" onClick="addToFavorites('${encodeURIComponent(JSON.stringify(each))}')"/>
             <p class="slider-image-name">${each.alt}</p>
             <p class="slider-photographer">${each.photographer}</p>
@@ -175,16 +175,14 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(firstData)
         displayfirstData.innerHTML = `
             <div class="dummy-image-container">
-                <div>
                     <div class="dummy-image-container">
-                        <img src="${firstData.src.small}" class="dummy-image"/>
+                        <img src="${firstData.src.medium}" class="dummy-image"/>
                     </div>
                     <div class="dummy-content-container">
                         <h3>${firstData.alt}</h3>
                         <p>${firstData.photographer}</p>
                         <a href="${firstData.photographer_url}" target="_blank"><button>Explore More</button></a>
                     </div>
-                </div>  
             </div>`
     }
     
